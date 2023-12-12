@@ -1,0 +1,19 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Search Results</h1>
+    <h2>Query Image</h2>
+    <img src="{{ query_image }}" width="300" height="300">
+    <h2>Similar Images</h2>
+    <div class="image-container">
+        {% for image_path in similar_images %}
+            <img src="{{ image_path }}" width="300" height="300">
+        {% endfor %}
+    </div>
+</body>
+</html>
